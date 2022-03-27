@@ -1,9 +1,9 @@
-var timeEl = document.querySelector(".time";)
+var timeEl = document.querySelector(".time");
 
 // Below is just setting some base variables that will be used for the JS file
 var letsPlay = document.querySelector('#button');
 var currentScore = 0
-var secondsLeft = 60
+var secondsLeft = 75
 
 // Below is going to be the questions and answers for the quiz
 var q1 = {
@@ -32,8 +32,20 @@ var q4 = {
 }
 
 var q5 = {
-    question: "In JavaScript to determine if something is true or false is called a ",
+    question: "In JavaScript to determine if something is true or false is called a(n) ",
     answers: ["Array", "Case", "Parse", "Boolean"],
+    rightAnswer: 3 || index #,
+}
+
+var q6 = {
+    question: "In JavaScript you should use local storage for all personal information",
+    answers: ["True", "False"],
+    rightAnswer: 0 || index #,
+}
+
+var q7 = {
+    question: "Which of these is not used to save a variable",
+    answers: ["var", "let", "const", "make"],
     rightAnswer: 3 || index #,
 }
 
@@ -42,7 +54,7 @@ function goToQuestions() {
 
 function gameTimer(), 
     var countDown = setInterval(function() {
-    secondsLeft --;
+    secondsLeft = secondsLeft -1;
     timeEl.textContent = "Time left:" + secondsLeft;
 
         if(secondsLeft === 0 ) {
@@ -50,13 +62,13 @@ function gameTimer(),
         displayScore();
         }
     
-    }
+    },
 
 function displayScore() {
 
-}
+},
 // Below is going to add an event listener for a button click
-submitButton.addEventListener('click', goToQuestions)
+submitButton.addEventListener('click', goToQuestions),
     submitButton
     
-console.log(submitButton)
+,console.log(var)

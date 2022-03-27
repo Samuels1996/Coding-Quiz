@@ -12,7 +12,7 @@ header {
     color: aqua;
     font-size: 20px;
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,6 +21,7 @@ header {
 
 body {
     font-size: 30px;
+    
 }
 
 button {
