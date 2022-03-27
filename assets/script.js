@@ -1,7 +1,11 @@
+var timeEl = document.querySelector(".time";)
 
-
+// Below is just setting some base variables that will be used for the JS file
 var letsPlay = document.querySelector('#button');
 var currentScore = 0
+var secondsLeft = 60
+
+// Below is going to be the questions and answers for the quiz
 var q1 = {
     question: "What CSS value acts as a frame around an image?",
     answers: ["Content", "Margin", "Border", "Padding"],
@@ -36,6 +40,22 @@ var q5 = {
 function goToQuestions() {
 }
 
+function gameTimer(), 
+    var countDown = setInterval(function() {
+    secondsLeft --;
+    timeEl.textContent = "Time left:" + secondsLeft;
+
+        if(secondsLeft === 0 ) {
+        clearInterval(countDown);
+        displayScore();
+        }
+    
+    }
+
+function displayScore() {
+
+}
+// Below is going to add an event listener for a button click
 submitButton.addEventListener('click', goToQuestions)
     submitButton
     
