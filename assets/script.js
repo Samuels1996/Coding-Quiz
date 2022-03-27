@@ -1,12 +1,13 @@
 
 
+var letsPlay = document.querySelector('#button');
+var currentScore = 0
+var q1 =
 
-
-
-
-
-submitButton.addEventListener('click')
-function(event) {
-    event.preventDefault
+function goToQuestions() {
 }
 
+submitButton.addEventListener('click', goToQuestions)
+    submitButton
+    
+console.log(submitButton)
