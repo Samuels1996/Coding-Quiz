@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Coding Quiz!</title>
-</head>
-    
-<header>
+  </head>
+
+  <header>
     <section>
-        <h1>Welcome to the coding quiz. See how many you can get right!</h1>
+      <h1>Welcome to the coding quiz. See how many you can get right!</h1>
     </section>
-</header>
-<body>
+  </header>
+  <body>
     <section id="intro-screen">
-        <h3>Would you like to test your knowledge and see how much you know? </h3>
-        <button id="play-btn">Lets Go!</button>
-        <script src="./assets/script.js"></script>
-    </section>    
-</body>
+      <h3>Would you like to test your knowledge and see how much you know?</h3>
+      <button id="play-btn">Lets Go!</button>
+    </section>
 
-<footer>
-    <h6>This was created by Brian Samuels using CSS, JavaScript, as well as HTML</h6>
-</footer>
+    <div class="main">
+      <nav>
+        <button>High Score</button>
+        <h3>Time:<span id="time">60</span></h3>
+      </nav>
+      <div class="container"></div>
+    </div>
 
+    <footer>
+      <h6>
+        This was created by Brian Samuels using CSS, JavaScript, as well as HTML
+      </h6>
+    </footer>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
