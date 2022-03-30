@@ -21,6 +21,10 @@ function handleTime() {
     time--;
     document.getElementById('time').innerText = time;
   }
+
+  if (time === 0) {
+    endGame()
+  }
 };
 // Below is going to be for the question and answer rendering
 function renderQuestions() {
@@ -41,7 +45,7 @@ function renderQuestions() {
             document.querySelector('.ans').innerHTML += `<button> ${ans } </button>`
           });
       
-          if (ans === rightAnswer) {
+          if (userChoice === rightAnswer) {
         qI++
       }
       else {
