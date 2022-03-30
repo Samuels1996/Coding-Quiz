@@ -4,44 +4,44 @@ const questions = [
   {
     question: "What CSS value acts as a frame around an image?",
     answers: ["Content", "Margin", "Border", "Padding"],
-    rightAnswer: 2,
+    rightAnswer: "Border",
     },
 
   {
     question: "Best practice for console logs is to ____ them to prevent hacking into generator devices", 
     answers: ["Delete", "Change", "Keep", "Realign"],
-    rightAnswer: 0,
+    rightAnswer: "Delete",
     },
 
   {
     question: "To move a folder in git you must use",
     answers: ["rm", "mv", "pull", "mkdir"],
-    rightAnswer: 1,
+    rightAnswer: "mv",
     },
 
   {
     question: "What is the base star number for an index?",
     answers: ["-1", "1", "0", "32"],
-    rightAnswer: 2,
+    rightAnswer: "0",
 
     },
 
   {
     question: "In JavaScript to determine if something is true or false is called a(n) ",
     answers: ["Array", "Case", "Parse", "Boolean"],
-    rightAnswer: 3,
+    rightAnswer: "Boolean",
     },
 
   {
     question: "In JavaScript you should use local storage for all personal information",
     answers: ["True", "False"],
-    rightAnswer: 0,
+    rightAnswer: "False",
     },
 
   {
     question: "Which of these is not used to save a variable",
     answers: ["var", "let", "const", "make"],
-    rightAnswer: 3,
+    rightAnswer: "make",
     }
 ];
 
@@ -55,34 +55,34 @@ var currentScore = 0;
 var secondsLeft = 75;
 var questionList = 0;
 var penalty = 10;
+var classList = classList;
 
-playBtn.addEventListener('click', startQuiz)
-
-
+playBtn.addEventListener('click', function() {
+  playBtn.setAttribute('class','hide')
+  currentQuestionIndex = 0
+  questionContainerElement.remove('class', 'hide')
+  showNextQuestion()}
+)
 
 console.log(playBtn)
 
 function startQuiz () {
-  playBtn.classList.setAttribute('hide')
-  currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
-  showNextQuestion()
-}
 
-function render(questionIndex) {
-  questionsDiv.innerHTML = "";
-  ulCreate.innerHTML = "";
-  for (var i = 0; i < questions.length; i++) {
-    var userQuestion = questions[questionIndex].title;
-    var userChoices = questions[questionIndex].choices;
-    questionsDiv.textContent = userQuestion
+
+timeRanges.addEventListener('click', function(){
+  if (holdInterval === 0) {
+    holdInterval = setInterval(function(){
+      secondsLeft--;
+      currentTime.textContent = "Time Left:" + secondsLeft;
+
+      if (secondsLeft <=0 ) {
+        clearInterval(holdInterval);
+        gameOver();
+        currentTime.textContent = "Game Over!";
+
+      }
+    }, 1000);
+  
+  render(questionIndex);
   }
-  userChoices.forEach(function (newItem) {
-    var listItem = document.createElement("li");
-    listItem.textContent = newItem;
-    questionsDiv.appendChild(ulCreate);
-    ulCreate.appendChild(listItem);
-    listItem.addEventListener('click', (compare));
-  })
-
-}
+})
