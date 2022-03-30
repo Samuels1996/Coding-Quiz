@@ -1,3 +1,4 @@
+// Below is going to list the questions and answers
 const questions = [
     {
       question: "What CSS value acts as a frame around an image?",
